@@ -9,15 +9,12 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy pyproject.toml
-COPY pyproject.toml .
+# Copy source code and pyproject.toml
+COPY . .
 
 # Install dependencies
 RUN pip install --upgrade pip && \
-    pip install --no-cache-dir -e .[dev]
-
-# Copy the rest of the application
-COPY . .
+    pip install --no-cache-dir .[dev]
 
 # Expose FastAPI port
 EXPOSE 8000
