@@ -1,0 +1,36 @@
+[project]
+name = "customersupport-backend"
+version = "0.1.0"
+description = "AI Customer Support Backend"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.111.0",
+    "uvicorn[standard]==0.29.0",
+    "pydantic==2.7.4",
+    "pydantic-settings==2.2.1",
+    "sqlalchemy[asyncio]==2.0.29",
+    "alembic==1.13.1",
+    "asyncpg==0.29.0",
+    "redis==5.0.3",
+    "celery==5.4.0",
+    "httpx==0.27.0",
+    "python-multipart==0.0.9",
+    "bcrypt==4.1.2",
+    "pyjwt==2.8.0",
+    "pgvector==0.3.0",
+    "pypdf==4.2.0",
+    "python-docx==1.1.0",
+    "aiofiles==23.2.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.1.1",
+    "pytest-asyncio>=0.23.6",
+    "pytest-cov>=4.1.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"

@@ -1,0 +1,40 @@
+# Environment & Secrets
+.env
+*.env
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+*.egg-info/
+.venv/
+venv/
+ENV/
+
+# Node & Frontend
+node_modules/
+dist/
+build/
+.output/
+*.log
+
+# Backend Storage & Uploads
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# System & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Docker / DB data volumes
+postgres_data/
+redis_data/
